@@ -23,13 +23,10 @@ public class SaveNoteServlet extends HttpServlet {
             String title = request.getParameter("title");
             String content = request.getParameter("content");
             takenote takenote = new takenote(title, content, new Date());
-            System.out.println("done Parameter");
 
             //hibernate save()
             Session session = HibernateUtil.getFactory().openSession();
-            System.out.println("session done");
             Transaction transaction = session.beginTransaction();
-            System.out.println("transaction done");
             session.save(takenote);
 
             transaction.commit();
