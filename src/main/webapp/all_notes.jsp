@@ -1,8 +1,8 @@
 <%@ page import="org.hibernate.Session" %>
-<%@ page import="com.helper.HibernateUtil" %>
-<%@ page import="org.hibernate.query.Query" %>
-<%@ page import="com.entities.takenote" %>
+<%@ page import="com.entities.*" %>
 <%@ page import="java.util.List" %>
+<%@ page import="org.hibernate.query.Query" %>
+<%@ page import="static com.helper.HibernateUtil.getFactory" %>
 <%--
   Created by IntelliJ IDEA.
   User: mdaza
@@ -25,34 +25,32 @@
     <div class="row">
         <div class="col-12">
             <%
-                Session session1 = HibernateUtil.getFactory().openSession();
-                Query query = session1.createQuery("from takenote");
-                List<takenote> list = query.list();
+                Session s = getFactory().openSession();
+                Query q = s.createQuery("from takenote ");
+                List<takenote> list = q.list();
                 for (takenote takenote : list) {
             %>
             <div class="card mt-3">
                 <img src="img/Note_Icon.png" class="card-img-top mx-auto" style="max-width: 100px" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title px-auto"><%= takenote.getTitle() %>
+                    <h5 class="card-title px-auto">
+                        <%= takenote.getTitle() %>
                     </h5>
-                    <p class="card-text px-auto"><%= takenote.getContent()%>
+                    <p class="card-text px-auto">
+                        <%= takenote.getContent()%>
                     </p>
                     <div class="container text-center mx-auto">
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="DeleteServlet?takenote_id<%=takenote.getId()%>" class="btn btn-danger">Delete</a>
                         <a href="#" class="btn btn-primary">Update</a>
-
                     </div>
-
-
                 </div>
             </div>
             <%
                 }
-                session1.close();
+                s.close();
             %>
         </div>
     </div>
-
 
 </div>
 
