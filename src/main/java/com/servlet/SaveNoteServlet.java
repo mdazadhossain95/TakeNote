@@ -3,7 +3,9 @@ package com.servlet;
 import com.entities.takenote;
 import com.helper.HibernateUtil;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
+
 
 @WebServlet("/SaveNoteServlet")
 public class SaveNoteServlet extends HttpServlet {
@@ -24,11 +27,17 @@ public class SaveNoteServlet extends HttpServlet {
             String content = request.getParameter("content");
             takenote takenote = new takenote(title, content, new Date());
 
+            Configuration configuration = new Configuration();
+            configuration.configure("hibernate.cfg.xml");
+            SessionFactory sessionFactory = configuration.buildSessionFactory();
+            Session session = sessionFactory.openSession();
+
+
             //hibernate save()
-            Session session = HibernateUtil.getFactory().openSession();
+//            Session s = HibernateUtil.getSessionFactory().openSession();
+//            Session session = HibernateUtil.getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();
             session.save(takenote);
-
             transaction.commit();
             session.close();
 

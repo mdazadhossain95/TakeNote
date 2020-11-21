@@ -1,9 +1,6 @@
 package com.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Random;
 
@@ -17,6 +14,11 @@ public class takenote {
     @Column(length = 1500)
     private String content;
     private Date addedDate;
+
+    public takenote() {
+
+    }
+
 
     public int getId() {
         return id;
@@ -35,7 +37,7 @@ public class takenote {
     }
 
     public String getContent() {
-        return content;
+        return this.content;
     }
 
     public void setContent(String content) {
@@ -51,15 +53,14 @@ public class takenote {
     }
 
     public takenote(String title, String content, Date addedDate) {
+        super();
         this.id = new Random().nextInt(10000);
         this.title = title;
         this.content = content;
         this.addedDate = addedDate;
     }
 
-    public takenote() {
-        super();
+    public void getContent(String content) {
 
     }
-
 }
