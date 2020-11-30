@@ -1,3 +1,11 @@
+<%--  Created by IntelliJ IDEA.--%>
+<%--  User: mdaza--%>
+<%--  Date: 19/11/2020--%>
+<%--  Time: 08:56--%>
+<%--  To change this template use File | Settings | File Templates.--%>
+<%--&ndash;%&gt;--%>
+
+
 <%@ page import="org.hibernate.Session" %>
 <%@ page import="org.hibernate.query.Query" %>
 <%@ page import="com.entities.takenote" %>
@@ -5,12 +13,7 @@
 <%@ page import="org.hibernate.cfg.Configuration" %>
 <%@ page import="org.hibernate.SessionFactory" %>
 
-<%--  Created by IntelliJ IDEA.--%>
-<%--  User: mdaza--%>
-<%--  Date: 19/11/2020--%>
-<%--  Time: 08:56--%>
-<%--  To change this template use File | Settings | File Templates.--%>
-<%--&ndash;%&gt;--%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

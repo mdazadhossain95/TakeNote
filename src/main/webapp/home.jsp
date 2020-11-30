@@ -17,10 +17,10 @@
 <div class="container">
     <%@include file="navbar.jsp" %>
     <div class="container text-center mx-auto m-3 p-3">
-        <button href="" class="btn btn-success btn-lg" style="height: 200px; width: 300px;">Login</button>
-        <button href="" class="btn btn-primary btn-lg" style="height: 200px; width: 300px;">Registration</button>
-        <button href="" class="btn btn-secondary btn-lg" style="height: 200px; width: 300px;">Guest</button>
-        <button href="" class="btn btn-secondary btn-lg" style="height: 200px; width: 300px;">Guest</button>
+        <button href="" class="btn btn-success btn-lg" style="height: 200px; width: 300px;">Add Note</button>
+        <button href="" class="btn btn-primary btn-lg" style="height: 200px; width: 300px;">Show Notes</button>
+        <button href="" class="btn btn-secondary btn-lg" style="height: 200px; width: 300px;">Calculator</button>
+<%--        <button href="" class="btn btn-secondary btn-lg" style="height: 200px; width: 300px;">Guest</button>--%>
     </div>
 </div>
 </body>

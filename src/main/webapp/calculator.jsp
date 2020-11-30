@@ -16,7 +16,6 @@
 </head>
 <body>
 
-
 <div class="container">
     <%@include file="navbar.jsp" %>
     <div id="header">
@@ -43,15 +42,15 @@
                     <button class="btn btn-warning" value="/">/</button>
                     <button class="btn btn-warning" value="*">*</button>
                 </div>
+
                 <div class="row">
                     <button class="btn btn-info" value="1">1</button>
                     <button class="btn btn-info" value="2">2</button>
                     <button class="btn btn-info" value="3">3</button>
                     <button class="btn btn-warning" value="+">+</button>
                     <button class="btn btn-warning" value="-">-</button>
-
-
                 </div>
+
                 <div class="row">
                     <button class="btn btn-info btn-zero" value="0">0</button>
                     <button class="btn btn-warning" value=".">.</button>

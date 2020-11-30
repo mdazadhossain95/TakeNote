@@ -11,20 +11,20 @@ body {
 
 #calc {
     text-align: center;
-    width: 380px;
+    width: 500px;
     display: block;
     border-radius:8px;
     border: 1px solid;
     bordel-color: #abc6c2;
     padding:8px;
-    margin-top:20px;
+    margin-top:25px;
     margin-left:auto;
     margin-right:auto;
-    background: #224662;
+    background: darkcyan;
 }
 
 #display {
-    background: #bcbcbc;
+    background: #f3f0f0;
     padding: 8px;
     margin:16px 12px 10px 16px;
     text-align: center;
@@ -33,7 +33,7 @@ body {
 }
 
 #result p{
-    font-size:1.8em;
+    font-size:2em;
 }
 
 #result,
@@ -45,11 +45,11 @@ body {
 #keyboard {
     display: inline-block;
     text-align: center;
-    margin-bottom:8px;
+    margin-bottom:14px;
 }
 
 .row {
-    margin-top: 6px;
+    margin-top: 8px;
 }
 
 .last-row {
@@ -67,12 +67,14 @@ button {
 }
 
 .btn-zero {
-    width: 60px;
+    width: 194px;
 }
 
-.btn-result {
+.btn-reslt {
+
+    align-items: end;
     float:right;
-    margin-left:4px;
-    height: 74px;
+    /*margin-left:4px;*/
+    /*height: 74px;*/
 }
 
