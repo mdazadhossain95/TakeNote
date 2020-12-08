@@ -21,6 +21,10 @@
                 <a class="nav-link " href="calculator.jsp" tabindex="-1" >Calculator</a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link " href="imgconverter.jsp" tabindex="-1" >Converter</a>
+            </li>
+
         </ul>
     </div>
 </nav>

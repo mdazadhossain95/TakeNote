@@ -15,7 +15,7 @@
 <div class="container">
     <%@include file="navbar.jsp" %>
 
-    <h1>Please fill your note detail</h1>
+    <h1 style="text-align: center">Take Your Note</h1>
     <br/>
 
     <%-- this is add form--%>
@@ -30,13 +30,13 @@
             <textarea name="content" required id="content" placeholder="Write your note Here" class="form-control"
                       style="height:300px"></textarea>
         </div>
+
         <div class="container text-center">
-            <button type="submit" class="btn btn-primary" >Submit</button>
-
-
+            <button type="submit" class="btn btn-primary w-auto">Submit</button>
+            <button type="button" class="btn btn-warning w-auto" onclick="save()">Save to Desktop</button>
         </div>
+
     </form>
 </div>
-
 </body>
 </html>

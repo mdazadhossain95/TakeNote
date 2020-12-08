@@ -32,10 +32,6 @@ public class SaveNoteServlet extends HttpServlet {
             SessionFactory sessionFactory = configuration.buildSessionFactory();
             Session session = sessionFactory.openSession();
 
-
-            //hibernate save()
-//            Session s = HibernateUtil.getSessionFactory().openSession();
-//            Session session = HibernateUtil.getSessionFactory().openSession();
             Transaction transaction = session.beginTransaction();
             session.save(takenote);
             transaction.commit();

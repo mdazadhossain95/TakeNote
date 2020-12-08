@@ -14,10 +14,6 @@ public class HibernateUtil {
             Configuration configuration = new Configuration();
             configuration.configure("hibernate.cfg.xml");
             SessionFactory sessionFactory = configuration.buildSessionFactory();
-//                    .configure(HibernateUtil.class.getResource("/hibernate.cfg.xml"));
-
-//            sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-//            sessionFactory = (SessionFactory) new Configuration().configure("hibernate.cfg.xml");
         }
 
         return sessionFactory;

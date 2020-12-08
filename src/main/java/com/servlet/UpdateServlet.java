@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 
 @WebServlet("/UpdateServlet")
 public class UpdateServlet extends HttpServlet {
@@ -28,10 +29,16 @@ public class UpdateServlet extends HttpServlet {
 
             takenote takenote = (takenote) session.get(takenote.class, id);
 
-            takenote.setTitle(title);
-            takenote.getContent(content);
 
+            takenote.setAddedDate(new Date());
+            takenote.getContent(content);
+            takenote.setTitle(title);
+
+            session.update(takenote);
+
+//            session.save(takenote);
             transaction.commit();
+//            session.getTransaction().commit();
             session.close();
 
             response.sendRedirect("all_notes.jsp");
