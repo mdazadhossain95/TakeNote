@@ -18,10 +18,6 @@
     <h1 class="text-center">Image Converter</h1>
     <br>
     <form id="myForm" enctype="multipart/form-data">
-<%--        <div class="form-group">--%>
-<%--            &lt;%&ndash;@declare id="fileurl"&ndash;%&gt;<label for="fileurl">Image URL:</label>--%>
-<%--            <input type="text" id="url" placeholder="URL" class="form-control">--%>
-<%--        </div>--%>
         <div class="form-group">
             <label for="image">Select Image:</label>
             <input type="file" id="image" class="form-control">

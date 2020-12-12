@@ -20,6 +20,8 @@
         <button class="btn btn-primary btn-lg" style="height: 200px; width: 300px;" onclick="window.location = 'all_notes.jsp'">Show Notes</button>
         <button class="btn btn-warning btn-lg" style="height: 200px; width: 300px;" onclick="window.location = 'calculator.jsp'">Calculator</button>
         <button class="btn btn-danger btn-lg" style="height: 200px; width: 300px;" onclick="window.location = 'imgconverter.jsp'">Image Converter</button>
+        <button class="btn btn-primary btn-lg" style="height: 200px; width: 300px;" onclick="window.location = 'stopwatch.jsp'">Stop Watch</button>
+
 
     </div>
 </div>

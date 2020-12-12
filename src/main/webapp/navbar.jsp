@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark blue">
     <a class="navbar-brand" href="index.jsp">Take Note</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -14,16 +15,22 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="all_notes.jsp" tabindex="-1" >Show Notes</a>
+                <a class="nav-link " href="all_notes.jsp" tabindex="-1">Show Notes</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="calculator.jsp" tabindex="-1" >Calculator</a>
+                <a class="nav-link " href="calculator.jsp" tabindex="-1">Calculator</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link " href="imgconverter.jsp" tabindex="-1" >Converter</a>
+                <a class="nav-link " href="imgconverter.jsp" tabindex="-1">Image Converter</a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link " href="stopwatch.jsp" tabindex="-1">Stop Watch</a>
+            </li>
+
+
 
         </ul>
     </div>
