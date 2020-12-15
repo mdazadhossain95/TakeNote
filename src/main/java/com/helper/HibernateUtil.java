@@ -1,7 +1,9 @@
 package com.helper;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
 
 
 public class HibernateUtil {
@@ -13,7 +15,13 @@ public class HibernateUtil {
         if (sessionFactory == null) {
             Configuration configuration = new Configuration();
             configuration.configure("hibernate.cfg.xml");
-            SessionFactory sessionFactory = configuration.buildSessionFactory();
+
+            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
+                    .applySettings(configuration.getProperties()).build();
+            System.out.println("Hibernate Java Config serviceRegistry created");
+            sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+
+//            SessionFactory sessionFactory = configuration.buildSessionFactory();
         }
 
         return sessionFactory;
