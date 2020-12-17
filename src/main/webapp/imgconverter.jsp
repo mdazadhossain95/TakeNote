@@ -33,6 +33,8 @@
         </div>
         <div class="form-group">
             <button class="btn btn-success w-auto">Convert Image</button>
+            <button type="reset" class="btn btn-primary w-auto">Reset</button>
+
         </div>
     </form>
 

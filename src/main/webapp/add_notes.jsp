@@ -32,7 +32,8 @@
         </div>
 
         <div class="container text-center">
-            <button type="submit" class="btn btn-primary w-auto">Submit</button>
+            <button type="submit" class="btn btn-success w-auto">Submit</button>
+            <button type="reset" class="btn btn-primary w-auto">Reset</button>
             <button type="button" class="btn btn-warning w-auto" onclick="save()">Save to Desktop</button>
         </div>
 

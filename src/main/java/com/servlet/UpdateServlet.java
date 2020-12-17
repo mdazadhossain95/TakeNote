@@ -5,7 +5,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,9 +35,7 @@ public class UpdateServlet extends HttpServlet {
 
             session.update(takenote);
 
-//            session.save(takenote);
             transaction.commit();
-//            session.getTransaction().commit();
             session.close();
 
             response.sendRedirect("all_notes.jsp");

@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,9 +34,6 @@ public class DeleteServlet extends HttpServlet {
             takenote tkn = session.get(takenote.class,id);
 
 
-
-
-//            takenote takenote = session.get(com.entities.takenote.class, id);
             session.delete(tkn);
             System.out.println("deleted");
             transaction.commit();
@@ -47,7 +43,7 @@ public class DeleteServlet extends HttpServlet {
             response.sendRedirect("all_notes.jsp");
 
         } catch (Exception e) {
-            //nothing
+            e.printStackTrace();
         }
 
     }
