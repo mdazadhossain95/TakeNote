@@ -28,6 +28,7 @@
         <div class="text-center mb-3">
             <button type="submit" class="btn btn-success w-auto">Sign in</button>
             <button type="reset" class="btn btn-primary w-auto">Reset</button>
+            <button type="button" class="btn btn-secondary w-auto" onclick="window.location = 'register.jsp'">Sign up</button>
         </div>
     </form>
 

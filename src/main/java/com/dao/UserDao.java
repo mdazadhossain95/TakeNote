@@ -1,8 +1,9 @@
 package com.dao;
 
-import com.helper.HibernateUtil;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import com.util.HibernateUtil;
 import com.model.User;
 
 public class UserDao {
@@ -35,7 +36,7 @@ public class UserDao {
             user = (User) session.createQuery("FROM User U WHERE U.userName = :userName").setParameter("userName", userName)
                     .uniqueResult();
 
-            if(user != null && user.getPassword().equals(password)) {
+            if (user != null && user.getPassword().equals(password)) {
                 return true;
             }
             // commit transaction
